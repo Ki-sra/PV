@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();
+            $table->foreign('created_by')->references('id')->on('users')->nullOnDelete();
             $table->boolean('archived')->default(false);
             $table->timestamps();
         });

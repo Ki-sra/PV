@@ -12,7 +12,14 @@
     <a class="navbar-brand" href="{{ route('pvs.index') }}">ISTA PV</a>
     <div class="d-flex">
       <a class="btn btn-outline-primary me-2" href="{{ route('pvs.import.form') }}">Importer</a>
-      <a class="btn btn-primary" href="{{ route('pvs.create') }}">Nouveau PV</a>
+      <a class="btn btn-primary me-2" href="{{ route('pvs.create') }}">Nouveau PV</a>
+      @guest
+        <a class="btn btn-outline-secondary" href="{{ route('login') }}">Login</a>
+      @else
+        <span class="me-2">{{ Auth::user()->name }} ({{ Auth::user()->role }})</span>
+        <a class="btn btn-outline-danger" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">@csrf</form>
+      @endguest
     </div>
   </div>
 </nav>

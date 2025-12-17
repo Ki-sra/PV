@@ -50,8 +50,20 @@ Notes to finish integration:
 	php artisan migrate
 
 - Auth scaffolding: run `composer require laravel/ui --dev` and `php artisan ui bootstrap --auth` (or use Jetstream) to provide login/register/password reset UI.
+ - Auth scaffolding: run `composer require laravel/ui --dev` and `php artisan ui bootstrap --auth` (or use Jetstream/Breeze) to provide login/register/password reset UI.
 
 - After auth is available, you can protect routes using middleware like `->middleware('role:admin,manager,archivist')` to restrict uploads and edits.
+
+Seeding initial admin user:
+
+	php artisan db:seed --class=\Database\Seeders\AdminUserSeeder
+
+Default credentials created by the seeder:
+
+- Email: `admin@example.com`
+- Password: `ChangeMe123!`
+
+Make sure to change the admin password after first login.
 
 Git remote (done by assistant when pushing):
 
