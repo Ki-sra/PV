@@ -14,9 +14,12 @@
 
 # Laravel
 /vendor
-/.env
+.venv
+vendor/
+ista_pv_laravel/vendor/
+.env
 /.phpunit.result.cache
-/storage/*.key
+/vendor/
 /storage/framework/cache/data
 /storage/framework/sessions
 /storage/framework/views
