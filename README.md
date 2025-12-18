@@ -144,16 +144,4 @@
 
  - Branch from `main` and open PRs. I'll continue implementing feature branches for import parsing, API endpoints, and tests, and will push those to `main` when complete (or to feature branches if you prefer PR review).
 
- ---
 
- ## Contact / Next actions I will take (unless you instruct otherwise)
-
- 1. Add PV document listing on PV detail pages (download links and metadata).
- 2. Implement bulk-import parser with dry-run & validation reporting.
- 3. Add API endpoints and Sanctum token auth for integrations.
-
- If you want the optional cleanup executed now (delete `ista_pv/`), run the script above or tell me to run it and I will remove it and push the changes.
-
- ---
-
- Thank you — I cleaned and organized the scaffolds and pushed them to `origin/main`. If you want me to continue by implementing any of the recommended steps, tell me which one to prioritize and I will proceed.
